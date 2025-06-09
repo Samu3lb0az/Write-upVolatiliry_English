@@ -3,7 +3,7 @@
 1. [Introduction](#1-introduction)
 2. [Orientations](#2-orientations)
 3. [Code Only](#3-code-only)
-4. [About Me (summary)](#4-about-me)
+4. [About Me](#4-about-me)
 
 ---
 
@@ -131,6 +131,6 @@ vol -f /Scenarios/Investigations/Investigation-2.raw windows.handles | grep 1940
 
 ---
 
-## 4. About Me (summary)
+## 4. About Me
 
 *Summary information about the author.*
