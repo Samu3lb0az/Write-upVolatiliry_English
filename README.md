@@ -128,7 +128,7 @@ vol -f /Scenarios/Investigations/Investigation-2.raw windows.dlllist | grep 740
 vol -f /Scenarios/Investigations/Investigation-2.raw windows.handles | grep 1940
 ```
 
-*I strongly recommend reviewing the **Orientations** section to avoid conflicts or misunderstandings.*
+*I strongly recommend reviewing the [Orientations](#2-orientations) section to avoid conflicts or misunderstandings.*
 
 ---
 
