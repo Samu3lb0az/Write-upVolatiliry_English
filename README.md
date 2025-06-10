@@ -4,7 +4,7 @@
 2. [Orientations](#2-orientations)
 3. [Code Only](#3-code-only)
 4. [About Me](#4-about-me)
-5. [Original Version]([https://github.com/Samu3lb0az/WriupVolatiliry_English.git](https://github.com/Samu3lb0az/WriupVolatility.git))
+5. [Original Version](https://github.com/Samu3lb0az/WriupVolatility.git)
 
 ## **1. Introduction**
 
@@ -222,6 +222,8 @@ vol -f /Scenarios/Investigations/Investigation-2.raw windows.pslist
 ```bash
 vol -f /Scenarios/Investigations/Investigation-2.raw windows.dlllist | grep 740
 ```
+
+*I strongly recommend reviewing the [Orientations](#2-orientations) section to avoid conflicts or misunderstandings.*
 
 ---
 
