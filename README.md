@@ -237,7 +237,7 @@ vol -f /Scenarios/Investigations/Investigation-2.raw windows.dlllist | grep 740
 I'm a full-stack developer seeking to learn and improve my cybersecurity techniques.
 
 -  **Practice in Cybersecurity**:
-I enhance skills through practical labs on TryHackMe, such as the LAB: Volatility, where I analyze memory dumps to investigate attacks, extract malicious artifacts (hidden processes, DLL injection) and reconstruct compromise scenarios.
+I enhance skills through practical labs on TryHackMe, such as the *LAB: Volatility*, where I analyze *memory dumps* to investigate attacks, extract malicious artifacts (hidden processes, DLL injection) and reconstruct compromise scenarios.
 
 -  **Where to find me**
 
