@@ -241,5 +241,5 @@ I enhance skills through practical labs on TryHackMe, such as the LAB: Volatilit
 
 -  **Where to find me**
 
-**LinkedIn**: www.linkedin.com/in/samuel-boaz-gonçalves
-**GitHub**: https://github.com/Samu3lb0az
+1. LinkedIn: www.linkedin.com/in/samuel-boaz-gonçalves
+2. GitHub: https://github.com/Samu3lb0az
