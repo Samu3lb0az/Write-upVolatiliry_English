@@ -213,4 +213,3 @@ vol -f /Scenarios/Investigations/Investigation-2.raw windows.dlllist | grep 740
 
 *Summary information about the author.*
 
-```
