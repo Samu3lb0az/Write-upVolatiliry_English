@@ -166,7 +166,7 @@ vol -f /Scenarios/Investigations/Investigation-2.raw windows.handles | grep 1940
 
 The **handles** plugin plus **grep** revealed two items—one of which is the answer:
 
-!\[Imagem para simplificar]\(Imagens/Imagem\_exemplificar.png)
+!\[Imagem para simplificar]\(Images/Images\Example_image.png)  
 
 ---
 
