@@ -230,4 +230,16 @@ vol -f /Scenarios/Investigations/Investigation-2.raw windows.dlllist | grep 740
 
 ## 4. About Me
 
-*Summary of information about the author.*
+**Samuel**
+**Full-Stack Developer | Cybersecurity Student**
+
+-  **More**:
+I'm a full-stack developer seeking to learn and improve my cybersecurity techniques.
+
+-  **Practice in Cybersecurity**:
+I enhance skills through practical labs on TryHackMe, such as the LAB: Volatility, where I analyze memory dumps to investigate attacks, extract malicious artifacts (hidden processes, DLL injection) and reconstruct compromise scenarios.
+
+-  **Where to find me**
+
+**LinkedIn**: www.linkedin.com/in/samuel-boaz-gonçalves
+**GitHub**: https://github.com/Samu3lb0az
