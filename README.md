@@ -3,7 +3,7 @@
 1. [Introduction](#1-introduction)
 2. [Orientations](#2-orientations)
 3. [Code Only](#3-code-only)
-4. [About Me (summary)](#4-about-me)
+4. [About Me](#4-about-me)
 
 ---
 
@@ -180,40 +180,37 @@ I researched and found there isn’t much mystery—a quick search reveals the p
 
 Isolated for easy copy:
 
-````bash
+```bash
 vol -f /Scenarios/Investigations/Investigation-1.vmem windows.info
-```*><stdin>*
+```
 
 ```bash
 vol -f /Scenarios/Investigations/Investigation-1.vmem windows.pslist
-```*><stdin>*
+```
 
 ```bash
 vol -f /Scenarios/Investigations/Investigation-1.vmem windows.memmap --pid 1640 --dump
-```*><stdin>*
+```
 
 ```bash
 strings *.dmp | grep -i "user-agent"
-```*><stdin>*
+```
 
 ```bash
 vol -f /Scenarios/Investigations/Investigation-2.raw windows.pslist
-```*><stdin>*
+```
 
 ```bash
 vol -f /Scenarios/Investigations/Investigation-2.raw windows.dlllist | grep 740
-```*><stdin>*
+```
 
-```bash
-vol -f /Scenarios/Investigations/Investigation-2.raw windows.handles | grep 1940
-```*><stdin>*
 
-*I strongly recommend reviewing the Orientations section to avoid conflicts or misunderstandings.*
+*Recomendo revisar o tópico [Orientações](#2-orientações) para evitar conflitos ou mal-entendidos.*
 
 ---
 
-## 4. About Me (summary)
+## 4. About Me
 
 *Summary information about the author.*
 
-````
+```
