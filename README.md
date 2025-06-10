@@ -3,14 +3,13 @@
 1. [Introduction](#1-introduction)
 2. [Orientations](#2-orientations)
 3. [Code Only](#3-code-only)
-4. [About Me](#4-about-me)
-5. [Original Version](https://github.com/Samu3lb0az/WriupVolatility.git)
+4. [About Me (summary)](#4-about-me)
 
 ---
 
 ## **1. Introduction**
 
-**Objective**: This writeup was developed to assist in **understanding the tasks** of the lab **Volatility**, providing a practical execution guide directly on the TryHackMe virtual machine. The environment already includes all pre-installed requirements (Python 3, **Volatility** tools, and necessary files), allowing you to focus on forensic analysis without worrying about setup.
+**Objective**: This writeup was developed to assist in **understanding the tasks** of the lab (**Lab Name**), providing a practical execution guide directly on the TryHackMe virtual machine. The environment already includes all pre-installed requirements (Python 3, **Volatility** tools, and necessary files), allowing you to focus on forensic analysis without worrying about setup.
 
 **Tool**: Volatility 3.
 
@@ -99,39 +98,122 @@ Based on the previous dump, the answer is **Y**.
 
 ---
 
-## 3. Code Only
+**Prompt: What suspicious process is running at PID 740 in Case 002?**
 
-Isolated for easy copy:
-
-```bash
-vol -f /Scenarios/Investigations/Investigation-1.vmem windows.info
-```
-
-```bash
-vol -f /Scenarios/Investigations/Investigation-1.vmem windows.pslist
-```
-
-```bash
-vol -f /Scenarios/Investigations/Investigation-1.vmem windows.memmap --pid 1640 --dump
-strings *.dmp | grep -i "user-agent"
-```
+This challenge is also simple. With the correct plugin and some analysis, you can find the answer. Just note that the memory file has changed:
 
 ```bash
 vol -f /Scenarios/Investigations/Investigation-2.raw windows.pslist
 ```
 
+---
+
+**Prompt: What is the full path of the suspicious binary at PID 740 in Case 002?**
+
+This one is more complex, involving another plugin plus a **grep** to search for something specific:
+
 ```bash
 vol -f /Scenarios/Investigations/Investigation-2.raw windows.dlllist | grep 740
 ```
+
+Here we used **dlllist** to list system resources and then **grep** to filter by the suspicious process’s PID found earlier.
+
+---
+
+**Prompt: What is the parent process of PID 740 in Case 002?**
+
+For this challenge, I used the same plugin as before and the same reasoning:
+
+```bash
+vol -f /Scenarios/Investigations/Investigation-2.raw windows.pslist
+```
+
+---
+
+**Prompt: What is the suspicious parent process PID connected to the decryptor in Case 002?**
+
+Same plugin again:
+
+```bash
+vol -f /Scenarios/Investigations/Investigation-2.raw windows.pslist
+```
+
+---
+
+**Prompt: From our current information, what malware is present on the system in Case 002?**
+
+I ran the same code to verify the correct process, and since we know it’s “@WanaDecryptor@”, I deduced the malware is **WannaCry**.
+
+---
+
+**Prompt: What DLL is loaded by the decryptor for socket creation in Case 002?**
+
+Again using a previously seen plugin:
+
+```bash
+vol -f /Scenarios/Investigations/Investigation-2.raw windows.dlllist | grep 740
+```
+
+---
+
+**Prompt: What mutex can be found that is a known indicator of the malware in Case 002?**
+
+I researched possible plugins and then used this tip:
 
 ```bash
 vol -f /Scenarios/Investigations/Investigation-2.raw windows.handles | grep 1940
 ```
 
-*I strongly recommend reviewing the [Orientations](#2-orientations) section to avoid conflicts or misunderstandings.*
+The **handles** plugin plus **grep** revealed two items—one of which is the answer:
+
+!\[Imagem para simplificar]\(Imagens/Imagem\_exemplificar.png)
 
 ---
 
-## 4. About Me
+**Prompt: What plugin could be used to identify all files loaded from the malware working directory in Case 002?**
+
+I researched and found there isn’t much mystery—a quick search reveals the plugin.
+
+---
+
+## 3. Code Only
+
+Isolated for easy copy:
+
+````bash
+vol -f /Scenarios/Investigations/Investigation-1.vmem windows.info
+```*><stdin>*
+
+```bash
+vol -f /Scenarios/Investigations/Investigation-1.vmem windows.pslist
+```*><stdin>*
+
+```bash
+vol -f /Scenarios/Investigations/Investigation-1.vmem windows.memmap --pid 1640 --dump
+```*><stdin>*
+
+```bash
+strings *.dmp | grep -i "user-agent"
+```*><stdin>*
+
+```bash
+vol -f /Scenarios/Investigations/Investigation-2.raw windows.pslist
+```*><stdin>*
+
+```bash
+vol -f /Scenarios/Investigations/Investigation-2.raw windows.dlllist | grep 740
+```*><stdin>*
+
+```bash
+vol -f /Scenarios/Investigations/Investigation-2.raw windows.handles | grep 1940
+```*><stdin>*
+
+*I strongly recommend reviewing the Orientations section to avoid conflicts or misunderstandings.*
+
+---
+
+## 4. About Me (summary)
 
 *Summary information about the author.*
+
+````
